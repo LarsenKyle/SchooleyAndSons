@@ -12,8 +12,9 @@ body {
   background-attachment: fixed; }
 
 .main-header {
+  font-weight: 300;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   position: fixed;
   text-align: center;
   top: 5vh;
@@ -48,3 +49,22 @@ a {
 h1 a:hover {
   color: #cc5500;
   transition: all 0.5s ease-out; }
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    padding-left: 2px;
+    padding-right: 2px; }
+  .main-header {
+    position: relative;
+    top: 5%;
+    left: 0%;
+    font-size: 1.3rem; }
+  .container {
+    flex-direction: column; }
+  .middle {
+    line-height: 5;
+    height: 25%;
+    width: 100%;
+    font-size: 1rem; }
+  .mid {
+    margin-top: 1.5rem; } }
