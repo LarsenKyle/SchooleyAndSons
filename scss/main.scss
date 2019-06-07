@@ -50,6 +50,8 @@ h3 {
   text-align: center;
   line-height: 1.5;
 
+  @include easeOut();
+
   &:hover {
     opacity: 0.7;
     background: lighten($primary-color, 5);
@@ -75,10 +77,18 @@ h3 {
 }
 
 //Contact Page Styles//
-#contact {
+.contact {
   position: fixed;
+  top: 7rem;
+  left: 10%;
   visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   @include easeOut();
+  &.show {
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
 }
 input[type="text"],
 textarea {
@@ -100,6 +110,9 @@ textarea {
   margin: 0 auto;
   color: white;
   padding-top: 30px;
+  &.show {
+    visibility: visible;
+  }
 }
 .button {
   background-color: $primary-color;
@@ -143,6 +156,7 @@ label {
     height: 25%;
     width: 100%;
     font-size: 1rem;
+    @include easeOut();
   }
   .mid {
     margin-top: 1.5rem;
@@ -157,21 +171,25 @@ label {
   height: 100px;
   @include easeOut();
 }
-#slide2 {
-  transform: translate(0, -10px);
-  z-index: 0;
-  height: 100px;
-  @include easeOut();
-}
+
 .link {
   padding-top: 10px;
   @include easeOut();
 }
 
 //Shop Styles//
-#shopShow {
-  display: none;
+.shop {
+  position: fixed;
+  top: 7rem;
+  left: 10%;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   @include easeOut();
+  &.show {
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .shop-container {
@@ -220,9 +238,20 @@ label {
 //About Styles
 
 //
-#about {
-  display: none;
+.about {
+  position: fixed;
+  top: 9rem;
+  left: 10%;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   @include easeOut();
+  &.show {
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .about-container {
@@ -244,8 +273,24 @@ label {
 }
 .about-title {
   text-align: center;
+  margin-bottom: -0.1rem;
 }
 .about-text {
   text-align: justify;
   padding: 0 1rem;
+}
+.sexy_line {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  height: 1px;
+  background: $secondary-color;
+  background: -webkit-gradient(
+    linear,
+    0 0,
+    100% 0,
+    from(#7a8e8e),
+    to(#7a8e8e),
+    color-stop(50%, $secondary-color)
+  );
 }

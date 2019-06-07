@@ -38,7 +38,8 @@ h3 {
   height: 100%;
   width: 33%;
   text-align: center;
-  line-height: 1.5; }
+  line-height: 1.5;
+  transition: all 0.5s ease-out; }
   .middle:hover {
     opacity: 0.7;
     background: #3e6e45;
@@ -57,10 +58,17 @@ h3 a:hover {
   color: #cc5500;
   transition: all 0.5s ease-out; }
 
-#contact {
+.contact {
   position: fixed;
+  top: 7rem;
+  left: 10%;
   visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out; }
+  .contact.show {
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 input[type="text"],
 textarea {
@@ -82,6 +90,8 @@ textarea {
   margin: 0 auto;
   color: white;
   padding-top: 30px; }
+  .content.show {
+    visibility: visible; }
 
 .button {
   background-color: #355e3b;
@@ -117,7 +127,8 @@ label {
     line-height: 5;
     height: 25%;
     width: 100%;
-    font-size: 1rem; }
+    font-size: 1rem;
+    transition: all 0.5s ease-out; }
   .mid {
     margin-top: 1.5rem; } }
 
@@ -127,19 +138,21 @@ label {
   height: 100px;
   transition: all 0.5s ease-out; }
 
-#slide2 {
-  transform: translate(0, -10px);
-  z-index: 0;
-  height: 100px;
-  transition: all 0.5s ease-out; }
-
 .link {
   padding-top: 10px;
   transition: all 0.5s ease-out; }
 
-#shopShow {
-  display: none;
+.shop {
+  position: fixed;
+  top: 7rem;
+  left: 10%;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out; }
+  .shop.show {
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 .shop-container {
   width: 80%;
@@ -180,9 +193,19 @@ label {
   padding-right: 1rem;
   padding-top: 0.5rem; }
 
-#about {
-  display: none;
+.about {
+  position: fixed;
+  top: 9rem;
+  left: 10%;
+  visibility: hidden;
+  transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out; }
+  .about.show {
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+    position: initial;
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 .about-container {
   margin: 0 auto;
@@ -202,8 +225,17 @@ label {
   border-radius: 5px; }
 
 .about-title {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: -0.1rem; }
 
 .about-text {
   text-align: justify;
   padding: 0 1rem; }
+
+.sexy_line {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  height: 1px;
+  background: #cc5500;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#7a8e8e), to(#7a8e8e), color-stop(50%, #cc5500)); }

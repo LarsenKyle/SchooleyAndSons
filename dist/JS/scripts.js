@@ -31,8 +31,11 @@ function toggleAbout() {
     aboutLink.className = "link";
     shopLink.className = "link";
     contactLink.className = "link";
-    aboutPage.removeAttribute("id");
+    aboutPage.classList.add("show");
     shopPage.setAttribute("id", "shopShow");
+    contactPage.classList.remove("show");
+    shopPage.classList.remove("show");
+
     showShop = false;
     showAbout = true;
   } else {
@@ -43,7 +46,8 @@ function toggleAbout() {
     aboutLink.removeAttribute("class");
     shopLink.removeAttribute("class");
     contactLink.removeAttribute("class");
-    aboutPage.setAttribute("id", "about");
+    aboutPage.classList.remove("show");
+    contactPage.classList.remove("show");
     showAbout = false;
   }
 }
@@ -58,7 +62,6 @@ function toggleShop() {
     shopLink.removeAttribute("class");
     contactLink.removeAttribute("class");
     contactPage.setAttribute("id", "contact");
-    showContact = false;
     about.setAttribute("id", "slide1");
     shop.setAttribute("id", "slide1");
     contact.setAttribute("id", "slide1");
@@ -68,7 +71,12 @@ function toggleShop() {
     contactLink.className = "link";
     shopPage.removeAttribute("id");
     aboutPage.setAttribute("id", "about");
+    shopPage.classList.add("show");
+    contactPage.classList.remove("show");
+    aboutPage.classList.remove("show");
     showShop = true;
+    showContact = false;
+    showAbout = false;
   } else {
     about.removeAttribute("id");
     shop.removeAttribute("id");
@@ -77,7 +85,9 @@ function toggleShop() {
     aboutLink.removeAttribute("class");
     shopLink.removeAttribute("class");
     contactLink.removeAttribute("class");
-    shopPage.setAttribute("id", "shopShow");
+    shopPage.classList.remove("show");
+    contactPage.classList.remove("show");
+
     showShop = false;
   }
 }
@@ -100,8 +110,10 @@ function toggleContact() {
     aboutLink.className = "link";
     shopLink.className = "link";
     contactLink.className = "link";
-    contactPage.removeAttribute("id");
+    contactPage.classList.add("show");
     aboutPage.setAttribute("id", "about");
+    aboutPage.classList.remove("show");
+    shopPage.classList.remove("show");
 
     showContact = true;
   } else {
@@ -113,6 +125,7 @@ function toggleContact() {
     shopLink.removeAttribute("class");
     contactLink.removeAttribute("class");
     contactPage.setAttribute("id", "contact");
+    contactPage.classList.remove("show");
     showContact = false;
   }
 }
