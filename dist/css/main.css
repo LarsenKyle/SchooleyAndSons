@@ -4,12 +4,17 @@
 
 html,
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   height: 100%;
-  background: url(../img/Main.jpg);
+  background: url(../img/Arctic.jpg);
   background-size: cover;
   background-attachment: fixed; }
+
+h3 {
+  height: 100%;
+  font-size: 1.75rem; }
 
 .main-header {
   font-weight: 300;
@@ -17,41 +22,88 @@ body {
   font-size: 1.9rem;
   position: fixed;
   text-align: center;
-  top: 5vh;
+  top: 2rem;
   left: 20%;
-  z-index: 1;
   width: 100%;
   text-shadow: -2px 1.5px 4px #6e3805; }
 
 .container {
   height: 100%;
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .middle {
+  overflow: hidden;
   margin: 0 auto;
   height: 100%;
   width: 33%;
   text-align: center;
-  vertical-align: middle;
-  line-height: 90vh; }
+  line-height: 1.5; }
   .middle:hover {
     opacity: 0.7;
     background: #3e6e45;
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-out;
+    cursor: pointer; }
 
 a {
+  padding-top: 250px;
   color: white;
   text-decoration: none;
   display: inline-block;
   width: 100%;
   height: 100%; }
 
-h1 a:hover {
+h3 a:hover {
   color: #cc5500;
   transition: all 0.5s ease-out; }
 
+#contact {
+  position: fixed;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px; }
+
+textarea {
+  min-height: 200px;
+  font-size: 1.3rem;
+  resize: none; }
+
+.content {
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  padding-top: 30px; }
+
+.button {
+  background-color: #355e3b;
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  font-size: 1srem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  float: right; }
+
+label {
+  font-size: 1.5rem;
+  padding-bottom: 15px; }
+
+.off {
+  position: relative;
+  right: 25px; }
+
 @media screen and (max-width: 1024px) {
-  h1 {
+  h3 {
     padding-left: 2px;
     padding-right: 2px; }
   .main-header {
@@ -68,3 +120,90 @@ h1 a:hover {
     font-size: 1rem; }
   .mid {
     margin-top: 1.5rem; } }
+
+#slide1 {
+  transform: translate(0, -10px);
+  z-index: 3;
+  height: 100px;
+  transition: all 0.5s ease-out; }
+
+#slide2 {
+  transform: translate(0, -10px);
+  z-index: 0;
+  height: 100px;
+  transition: all 0.5s ease-out; }
+
+.link {
+  padding-top: 10px;
+  transition: all 0.5s ease-out; }
+
+#shopShow {
+  display: none;
+  transition: all 0.5s ease-out; }
+
+.shop-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto; }
+
+.card {
+  background: #7a8e8e;
+  width: 180px;
+  color: white;
+  margin: 3rem 0.5rem 0.5rem 1rem;
+  z-index: 1; }
+
+.title {
+  text-align: center; }
+  .title .product {
+    margin: 0.5rem;
+    font-size: 1.2rem; }
+
+.desciption {
+  margin-top: 0;
+  padding: 0 0.2rem;
+  text-align: justify; }
+
+.line {
+  background: #cc5500;
+  height: 1px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0; }
+
+.sel {
+  text-align: center; }
+
+.btn {
+  padding-right: 1rem;
+  padding-top: 0.5rem; }
+
+#about {
+  display: none;
+  transition: all 0.5s ease-out; }
+
+.about-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+  color: white;
+  background: #7a8e8e;
+  opacity: 0.9; }
+
+.about-img {
+  margin-top: 1rem;
+  border-radius: 25px; }
+
+.about-image {
+  border-radius: 5px; }
+
+.about-title {
+  text-align: center; }
+
+.about-text {
+  text-align: justify;
+  padding: 0 1rem; }
