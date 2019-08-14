@@ -2,7 +2,7 @@
 
 $primary-color: #355e3b;
 $secondary-color: #cc5500;
-$home-image: url(../img/Arctic.jpg);
+$home-image: url(../img/main.jpg);
 $background-opacity: 0.8;
 * {
   box-sizing: border-box;
@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   background: $home-image;
   background-size: cover;
   background-attachment: fixed;
@@ -31,7 +32,7 @@ h3 {
   font-size: 1.9rem;
   position: fixed;
   text-align: center;
-  top: 2rem;
+  top: 2.5rem;
   left: 20%;
   width: 100%;
   text-shadow: -2px 1.5px 4px #6e3805;
@@ -60,20 +61,38 @@ h3 {
   }
 }
 a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.main-menu {
   padding-top: 250px;
   color: white;
   text-decoration: none;
   display: inline-block;
   width: 100%;
   height: 100%;
+  text-shadow: 0px 0px 4px #606168;
 }
 h3 {
   a {
     &:hover {
       color: $secondary-color;
       @include easeOut();
+      text-shadow: 0px 0px 2px rgb(77, 88, 90);
+      text-shadow: 0px 0px 3px rgb(102, 116, 119);
+      text-shadow: 0px 0px 4px rgb(77, 88, 90);
     }
   }
+}
+.close {
+  visibility: hidden;
+  position: fixed;
+  top: 17%;
+  left: 45%;
+  transform: translate3d(0, 100%, 0);
+  font-size: 2rem;
 }
 
 //Contact Page Styles//
@@ -88,6 +107,19 @@ h3 {
     position: initial;
     visibility: visible;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+.secondaryText {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+}
+.contact-info {
+  background: $primary-color;
+  margin-top: 5rem;
+  &h3 {
+    padding: 10px;
   }
 }
 input[type="text"],
@@ -138,13 +170,37 @@ label {
 /////////////////
 
 @include mediaMd {
+  .about-image {
+    width: 95%;
+  }
+  #card {
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  .close {
+    &.show-close {
+      visibility: visible;
+      z-index: 3;
+    }
+  }
+  #slide1 {
+    display: none;
+  }
+  a {
+    padding-top: 0;
+  }
   h3 {
     padding-left: 2px;
     padding-right: 2px;
+    a {
+      &:hover {
+        color: inherit;
+      }
+    }
   }
   .main-header {
     position: relative;
-    top: 5%;
+    top: 3%;
     left: 0%;
     font-size: 1.3rem;
   }
@@ -152,6 +208,10 @@ label {
     flex-direction: column;
   }
   .middle {
+    opacity: 0.7;
+    background: $primary-color;
+    overflow: initial;
+    padding-top: 1rem;
     line-height: 5;
     height: 25%;
     width: 100%;
@@ -166,6 +226,8 @@ label {
 //Style for sliding menu up and down//
 
 #slide1 {
+  background: #355e3b;
+  opacity: 0.9;
   transform: translate(0, -10px);
   z-index: 3;
   height: 100px;
@@ -178,6 +240,11 @@ label {
 }
 
 //Shop Styles//
+.desciption {
+  p {
+    font-size: 0.8rem;
+  }
+}
 .shop {
   position: fixed;
   top: 7rem;
@@ -191,7 +258,10 @@ label {
     transform: translate3d(0, 0, 0);
   }
 }
-
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
 .shop-container {
   width: 80%;
   display: flex;
@@ -200,11 +270,13 @@ label {
   margin: 0 auto;
 }
 .card {
+  position: relative;
   background: #7a8e8e;
-  width: 180px;
+  width: 200px;
   color: white;
   margin: 3rem 0.5rem 0.5rem 1rem;
   z-index: 1;
+  height: 450px;
 }
 .title {
   text-align: center;
@@ -217,6 +289,7 @@ label {
   margin-top: 0;
   padding: 0 0.2rem;
   text-align: justify;
+  padding: 5px;
 }
 
 .line {
@@ -232,6 +305,13 @@ label {
 .btn {
   padding-right: 1rem;
   padding-top: 0.5rem;
+}
+.btn {
+  .button {
+    position: absolute;
+    bottom: 4px;
+    right: 2px;
+  }
 }
 //
 

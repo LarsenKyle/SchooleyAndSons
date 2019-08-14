@@ -6,7 +6,7 @@
       href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -14,15 +14,16 @@
   </head>
   <body class="canvas">
     <div class="main-header"><h1>Schooley & Sons Tackle</h1></div>
+    <i class="fas fa-window-close close"></i>
     <div class="container ">
       <div class="mid middle">
-        <h3><a id="die1">About</a></h3>
+        <h3><a class="main-menu" id="die1">About</a></h3>
       </div>
       <div class="left middle">
-        <h3><a id="die2">Shop</a></h3>
+        <h3><a class="main-menu" id="die2">Shop</a></h3>
       </div>
       <div class="right middle">
-        <h3><a id="die3">Contact</a></h3>
+        <h3><a class="main-menu" id="die3">Contact</a></h3>
       </div>
     </div>
 
@@ -31,9 +32,8 @@
     ---------------->
 
     <main id="contact" class="contact" >
-      <div class="content">
         
-          
+      <div class="content">
                   <form action="https://formspree.io/krlars87@gmail.com" method="POST">
                       <label><span class="off">Your contact info:</span>
                           <input type="text" name="contact" placeholder="you@example.com">
@@ -45,6 +45,10 @@
                       <input type="hidden" name="_next">
                       <button class="button">Send</button>
                   </form>  
+                  <div class="adressBox"><h4><span class="secondaryText">Phone:</span> (616) 754-3266 <br> <br> <span class="secondaryText"> Adress:</span> 13700 14 Mile Rd NE, Greenville, MI</h4></div>
+
+        </div>
+                  
       </main>
 
 
@@ -58,110 +62,175 @@
       -->
       <main id="shopShow" class="shop">
           <div class="shop-container">
-            <div class="card">
+            <!-- 
+              
+              Item One
+
+             -->
+            <div id="card" class="card">
               <div class="img">
-                <img src="https://placeimg.com/180/180/any" alt="" />
+                <img src="img/springBobber.jpg" alt="Shop image of spring bobber" />
               </div>
-              <div class="title"><h4 class="product">Product Title</h4></div>
+              <div class="title"><h4 class="product">Original Spring Bobber</h4></div>
               <div class="line"></div>
               <div class="desciption">
                 <p>
-                  Product desciption will go here 
+                  Schooley’s Original Sring Bobber is steel and sensitive to every bite. This bobber never touches water, and never freezes in water. It’s ideal for use from a boat or on the ice.
+                  <br> <br>
+                  Price Per Unit: $1.89
                 </p>
               </div>
-              <div class="sel">
-                <select name="Color" id="color-select"
-                  >Color</select
-                >
-              </div>
               <div class="btn">
-                <button class="button">Buy</button>
+                <button class="button"><a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HTE8YQMUNNVKJ">Buy</a></button>
               </div>
             </div>
-            <div class="card">
+            <!-- 
+              
+              Item Two 
+            
+            -->
+            <div id="card" class="card">
               <div class="img">
-                <img src="https://placeimg.com/180/180/any" alt="" />
+                <img src="https://placeimg.com/200/200/any" alt="" />
               </div>
-              <div class="title"><h4 class="product">Product Title</h4></div>
+              <div class="title"><h4 class="product">Over the End Bobber</h4></div>
               <div class="line"></div>
               <div class="desciption">
                 <p>
-                  This is going to be some kind of desciption of the product, so
-                  check this thing out wat the eff
+                  Schooley’s Over the End Bobber is the same as the original but, it slides back and forth over the end of the pole
+                  <br> <br>
+                  Price Per Unit: $2.59
                 </p>
               </div>
-              <div class="sel">
-                <select name="Color" id="color-select"
-                  >Color</select
-                >
-              </div>
               <div class="btn">
-                <button class="button">Buy</button>
-              </div>
+                  <button class="button"><a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9XLKEV56M4BV8">Buy</a></button>
+                </div>
             </div>
-            <div class="card">
+          <!-- 
+  
+           Item 3
+
+              -->
+            <div id="card" class="card">
               <div class="img">
-                <img src="https://placeimg.com/180/180/any" alt="" />
+                <img src="img/corkScrew.jpg" alt="" />
               </div>
-              <div class="title"><h4 class="product">Product Title</h4></div>
+              <div class="title"><h4 class="product">Cork Screw <br>Bobber</h4></div>
               <div class="line"></div>
               <div class="desciption">
                 <p>
-                  This is going to be some kind of desciption of the product, so
-                  check this thing out wat the eff
+                  Schooley’s Corkscrew Bobber is a more sensitive bobber that can detect any bite. It slides on the pole for different action.
+                  <br> <br>
+                  Price Per Unit: $2.09
                 </p>
               </div>
-              <div class="sel">
-                <select name="Color" id="color-select"
-                  >Color</select
-                >
-              </div>
               <div class="btn">
-                <button class="button">Buy</button>
-              </div>
+                  <button class="button"><a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5YQ3AUYH4MLZ6">Buy</a></button>
+                </div>
             </div>
-            <div class="card">
+              <!-- 
+                
+                Item 4
+
+               -->
+            <div id="card" class="card">
               <div class="img">
-                <img src="https://placeimg.com/180/180/any" alt="" />
+                <img src="img/depthMarker.jpg" alt="" />
               </div>
-              <div class="title"><h4 class="product">Product Title</h4></div>
+              <div class="title"><h4 class="product">Depth Marker Reel Pins</h4></div>
               <div class="line"></div>
               <div class="desciption">
                 <p>
-                  This is going to be some kind of desciption of the product, so
-                  check this thing out wat the eff
+                    Schooley’s Depth Marker Reel Pins are a sturdy plastic pin. They easily insert into your De-Ma-Reel to stop payout of line at the same depth each time. These are available in red, yellow and green.
+                    <br> <br>
+                    Price Per Unit: $0.27
                 </p>
               </div>
               <div class="sel">
-                <select name="Color" id="color-select"
-                  >Color</select
-                >
               </div>
               <div class="btn">
-                <button class="button">Buy</button>
+                <button  class="button"> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S2TFNB3DXE8DW"> Buy</a></button>
               </div>
             </div>
-            <div class="card">
+            <!-- 
+              Item 5
+             -->
+            <div id="card" class="card">
               <div class="img">
-                <img src="https://placeimg.com/180/180/any" alt="" />
+                <img src="img/Schooleys-De-Ma-Reel.jpg" alt="" />
               </div>
-              <div class="title"><h4 class="product">Product Title</h4></div>
+              <div class="title"><h4 class="product">De-Ma Reel</h4></div>
               <div class="line"></div>
-              <div class="des">
+              <div class="desciption">
                 <p>
-                  This is going to be some kind of desciption of the product, so
-                  check this thing out wat the eff
-                </p>
-              </div>
-              <div class="sel">
-                <select name="Color" id="color-select"
-                  >Color</select
-                >
+                    Schooley’s De-Ma-Reel is molded of nylon and very durable. This lightweight reel can be used on cande poles and is available in red, green and yellow
+                    <br> <br>
+                    Price Per Unit: $4.79
+                  </p>
               </div>
               <div class="btn">
-                <button class="button">Buy</button>
+                  <button  class="button"> <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5YQ3AUYH4MLZ6"> Buy</a></button>
               </div>
             </div>
+            <!-- 
+              Item 6
+             -->
+             <div id="card" class="card">
+                <div class="img">
+                  <img src="img/arcticBlue.jpg" alt="" />
+                </div>
+                <div class="title"><h4 class="product">Arctic Blue Ice Rod</h4></div>
+                <div class="line"></div>
+                <div class="desciption">
+                  <p>
+                    Comes with a cork handle and reel rings. The blank is light blue with a fluorescent red tip for visibility, and has a hook keeper. The rods are ultra light for sensitivity and fast action. Comes in 5 different lengths
+                    <br> <br>
+                    Price Per Unit:
+                    18" $12.99
+                    24" $13.99
+                    30" $15.50
+                    36" $16.99
+                    42" $17.99
+                    
+                  </p>
+                </div>
+                <div class="btn">
+                  <button  class="button"> <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S2TFNB3DXE8DW"> Buy</a></button>
+                </div>
+              </div>
+              <!-- Item 7 -->
+             <div id="card" class="card">
+                <div class="img">
+                  <img src="img/springBobberPole.jpg" alt="" />
+                </div>
+                <div class="title"><h4 class="product">Spring Bobber Poles</h4></div>
+                <div class="line"></div>
+                <div class="desciption">
+                  <p>
+                      Fish at any depth with this complete fishing outfit. The fishing outfit includes a bobber, line and lure that can detect any bite. This outfit comes in 3 different lengths from 21” to 40”. Shorter lengths are ideal for confined areas and shanties.
+                  </p>
+                </div>
+                <div class="btn">
+                  <button  class="button"> <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S2TFNB3DXE8DW"> Buy</a></button>
+                </div>
+              </div>
+             <div id="card" class="card">
+                <div class="img">
+                  <img src="img/springBobberPole.jpg" alt="" />
+                </div>
+                <div class="title"><h4 class="product">Deluxe Bobber Pole</h4></div>
+                <div class="line"></div>
+                <div class="desciption">
+                  <p>
+                      Schooley’s New Deluxe Bobber Poles come with a crafted wood handle. 
+                      Fish at any depth with this complete fishing outfit. The fishing outfit includes bobber,
+                       line and lure that can detect any bite. 
+
+                  </p>
+                </div>
+               
+                  
+              </div>
           </div>
         </main>
         <!------------
@@ -176,23 +245,24 @@
           <div class="about-img">
             <img
               class="about-image"
-              src="https://placeimg.com/300/250/any"
+              src="img/aboutImg.jpg"
               alt=""
             />
           </div>
   
           <div class="about-text">
             <p class="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget
-              nulla facilisi etiam dignissim diam quis enim. Amet luctus venenatis
-              lectus magna fringilla urna porttitor rhoncus. Vitae purus faucibus
-              ornare suspendisse. Scelerisque fermentum dui faucibus in ornare
-              quam viverra orci. Facilisis magna etiam tempor orci eu lobortis
-              elementum. Semper quis lectus nulla at volutpat diam ut venenatis.
-              Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar.
-              Nam libero justo laoreet sit amet cursus sit amet. Varius quam
-              quisque id diam vel
+                Our grandpa Marvin Schooley was an amazing man with a passion for ice fishing! He loved making his own jigs and selling them to his co-workers at Gibson Refrigeration aka Frigidaire. 
+
+                He had a dream one night which sparked the idea for the first Spring Bobber Pole. Ice fishing with family and friends became a testing ground for his invention. Everyone was astonished with 
+                
+                his prototype and began asking him to make one for them. With an entrepreneur spirit, grandpa applied for his first patent.  And, so the business was born! In the 1960s he made 
+                
+                improvements to the pole and developed more ice fishing tackle for his customers. Today we keep grandpa's spirit and passion alive by making improvements, introducing new products and 
+                
+                keeping the business in the family! I think gramps would be amazed that his inventions are still popular today! 
+                
+                Thank you for your interest in our products! Happy Fishing!
             </p>
           </div>
         </div>

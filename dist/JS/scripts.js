@@ -8,13 +8,14 @@ const contain = document.querySelector(".container");
 const contactPage = document.querySelector("#contact");
 const shopPage = document.querySelector("#shopShow");
 const aboutPage = document.querySelector("#about");
-
+const mobileMenu = document.querySelector(".close");
 let showContact = false;
 let showShop = false;
 let showAbout = false;
 
 function toggleAbout() {
   if (!showAbout) {
+    mobileMenu.classList.add("show-close");
     about.removeAttribute("id");
     shop.removeAttribute("id");
     contact.removeAttribute("id");
@@ -22,7 +23,7 @@ function toggleAbout() {
     aboutLink.removeAttribute("class");
     shopLink.removeAttribute("class");
     contactLink.removeAttribute("class");
-    contactPage.setAttribute("id", "contact");
+
     showContact = false;
     about.setAttribute("id", "slide1");
     shop.setAttribute("id", "slide1");
@@ -32,7 +33,7 @@ function toggleAbout() {
     shopLink.className = "link";
     contactLink.className = "link";
     aboutPage.classList.add("show");
-    shopPage.setAttribute("id", "shopShow");
+
     contactPage.classList.remove("show");
     shopPage.classList.remove("show");
 
@@ -48,12 +49,16 @@ function toggleAbout() {
     contactLink.removeAttribute("class");
     aboutPage.classList.remove("show");
     contactPage.classList.remove("show");
+    aboutLink.classList.add("main-menu");
+    contactLink.classList.add("main-menu");
+    shopLink.classList.add("main-menu");
     showAbout = false;
   }
 }
 
 function toggleShop() {
   if (!showShop) {
+    mobileMenu.classList.add("show-close");
     about.removeAttribute("id");
     shop.removeAttribute("id");
     contact.removeAttribute("id");
@@ -87,13 +92,16 @@ function toggleShop() {
     contactLink.removeAttribute("class");
     shopPage.classList.remove("show");
     contactPage.classList.remove("show");
-
+    aboutLink.classList.add("main-menu");
+    contactLink.classList.add("main-menu");
+    shopLink.classList.add("main-menu");
     showShop = false;
   }
 }
 
 function toggleContact() {
   if (!showContact) {
+    mobileMenu.classList.add("show-close");
     about.removeAttribute("id");
     shop.removeAttribute("id");
     contact.removeAttribute("id");
@@ -126,10 +134,27 @@ function toggleContact() {
     contactLink.removeAttribute("class");
     contactPage.setAttribute("id", "contact");
     contactPage.classList.remove("show");
+    aboutLink.classList.add("main-menu");
+    contactLink.classList.add("main-menu");
+    shopLink.classList.add("main-menu");
     showContact = false;
   }
+}
+function toggleX() {
+  mobileMenu.classList.remove("show-close");
+  about.removeAttribute("id");
+  shop.removeAttribute("id");
+  contact.removeAttribute("id");
+  contain.removeAttribute("id");
+  contactPage.classList.remove("show");
+  aboutPage.classList.remove("show");
+  shopPage.classList.remove("show");
+  aboutLink.removeAttribute("class");
+  shopLink.removeAttribute("class");
+  contactLink.removeAttribute("class");
 }
 
 contact.addEventListener("click", toggleContact);
 shop.addEventListener("click", toggleShop);
 about.addEventListener("click", toggleAbout);
+mobileMenu.addEventListener("click", toggleX);
