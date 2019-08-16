@@ -2,7 +2,7 @@
 
 $primary-color: #355e3b;
 $secondary-color: #cc5500;
-$home-image: url(../img/main.jpg);
+$home-image: url(../img/Main.jpg);
 $background-opacity: 0.8;
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/main.jpg);
+  background: $home-image;
   background-size: cover;
   background-attachment: fixed;
 
