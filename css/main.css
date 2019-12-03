@@ -143,6 +143,12 @@ label {
   right: 25px; }
 
 @media screen and (max-width: 1024px) {
+  #die1 {
+    padding-top: 1rem; }
+  #die2 {
+    padding-top: 1rem; }
+  #die3 {
+    padding-top: 1rem; }
   .about-image {
     width: 95%; }
   #card {
