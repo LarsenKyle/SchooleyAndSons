@@ -142,6 +142,15 @@ label {
   position: relative;
   right: 25px; }
 
+#die1 {
+  padding-top: 250px; }
+
+#die2 {
+  padding-top: 250px; }
+
+#die3 {
+  padding-top: 250px; }
+
 @media screen and (max-width: 1024px) {
   #die1 {
     padding-top: 1rem; }
